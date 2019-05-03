@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+public class Simplecal {
+
+    public static void main(String[] args) {
+
+    	int number1, number2;
+        char operator;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your first number:");
+
+        number1 = scanner.nextInt();
+        System.out.print("Enter your second number:");
+        number2 = scanner.nextInt();
+
+        System.out.print("Enter an operation which you want to perform: + for addition , - for subtraction , * for multiplication , / for division : operator -");
+        operator = scanner.next().charAt(0);
+
+        scanner.close();
+        int output;
+
+        switch(operator)
+        {
+            case '+':
+            	output = number1 + number2;
+                break;
+            case '-':
+            	output = number1 - number2;
+                break;
+            case '*':
+            	output = number1 * number2;
+                break;
+            case '/':
+            	output = number1 / number2;
+                break;
+            default:
+                System.out.printf("wrong operator");
+                return;
+        }
+
+        System.out.println(number1+" "+operator+" "+number2+": "+output);
+    }
+}
+
